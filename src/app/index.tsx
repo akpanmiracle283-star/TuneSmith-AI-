@@ -8,6 +8,8 @@ import {
 } from "react-native";
 
 export default function HomeScreen() {
+  console.log("TuneSmith HomeScreen loaded");
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
