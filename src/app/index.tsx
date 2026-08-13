@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { router } from "expo-router";
 
 export default function HomeScreen() {
   console.log("TuneSmith HomeScreen loaded");
@@ -28,7 +29,10 @@ export default function HomeScreen() {
         </Text>
       </View>
 
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => router.push("/write-lyrics")}
+      >
         <Text style={styles.buttonText}>📝 Write Lyrics</Text>
       </TouchableOpacity>
 
