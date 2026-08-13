@@ -6,16 +6,18 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { router } from "expo-router";
+import { useRouter } from "expo-router";
 
 export default function HomeScreen() {
-  console.log("TuneSmith HomeScreen loaded");
+  const router = useRouter();
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.logo}>🎵</Text>
+
         <Text style={styles.title}>TuneSmith AI</Text>
+
         <Text style={styles.subtitle}>
           Your AI-powered songwriting assistant
         </Text>
@@ -23,6 +25,7 @@ export default function HomeScreen() {
 
       <View style={styles.card}>
         <Text style={styles.cardTitle}>Welcome</Text>
+
         <Text style={styles.cardText}>
           Turn your ideas into amazing lyrics, improve existing songs, and
           discover fresh inspiration with AI.
